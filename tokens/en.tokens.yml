@@ -1,0 +1,70 @@
+constants:
+  - physical:
+    - boltzmann:
+        - symbol: 'k<sub>B</sub>'
+        - value: 1.3806488e-23
+        - unit: J/K
+    - cosmological:
+        - symbol: Λ
+        - value: 2.036e-35
+        - unit: J/K
+    - planck:
+        - symbol: h
+        - value: 6.62606876e-34
+        - unit: J/s
+    - proton mass:
+        - symbol: 'm<sub>p</sub>'
+        - value: 1.6726219236951e-27
+    - speed of light in vacuum:
+        - symbol: c
+        - unit: m/s
+        - value: 299792458
+
+
+#units:
+#  - length:
+#      - meter:
+#          - symbol: m
+#      - atronomical unit:
+#          - symbol: au
+#      - meter:
+#          - symbol: m
+#      - meter:
+#          - symbol: m
+#      - meter:
+#          - symbol: m
+#      - meter:
+#          - symbol: m
+#      - meter:
+#          - symbol: m
+#
+#  - pressure:
+#      - pascal:
+#          - symbol: Pa
+#      - bar:
+#          - symbol: bar
+#      - technic atmosphere:
+#          - symbol: at
+#      - standard atmosphere:
+#          - symbol: atm
+#      - torr:
+#          - symbol: Tr
+#      - pound per square inch:
+#          - symbol: psi
+#  - temperature:
+#      - celsius:
+#          - symbol: °C
+#      - fahrenheit:
+#          - symbol: °F
+#      - kelvin:
+#          - symbol: K
+#      - rankine:
+#          - symbol: °Ra
+#  - time:
+#      - seconds:
+#          - symbol: s
+#      - minute:
+#          - symbol: min
+#      - hour:
+#          - symbol: h
+
