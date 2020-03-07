@@ -1,7 +1,14 @@
 .sidebar {
   height: 100%;
-  width: 70px;
+  width: 296px;
   box-shadow: 0 0 5px black;
+  overflow: auto;
+  background: var(--primary-background);
+
+  h6 {
+    color: var(--primary-color);
+    margin-bottom: 0;
+  }
 
   ul, li {
     padding: 0;
@@ -9,16 +16,38 @@
     list-style-type: none;
   }
 
+  ul {
+    border-left: 1px dashed var(--secondary-color);
+    margin-left: 10px;
+  }
+
   li {
-    height: 70px;
     display: flex;
+    margin-left: -3px;
 
     a {
       height: 100%;
       width: 100%;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: left;
+      border-left: 4px solid transparent;
+
+     &:visited, &:link {
+        color: var(--secondary-color);
+      }
+
+      &:hover,  &:active {
+        color: var(--primary-color);
+      }
     }
+  }
+}
+
+.active {
+  background: rgba(#E6E2AF, .2);
+  border-color: var(--primary-color) !important;
+  &:link, &:visited {
+    color: var(--primary-color) !important;
   }
 }

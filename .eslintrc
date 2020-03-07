@@ -1,0 +1,46 @@
+{
+  "extends": ["airbnb", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended", "prettier/@typescript-eslint"],
+  "env": {
+    "jest": true,
+    "browser": true,
+    "node": true,
+    "jasmine": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "linebreak-style": 0,
+    "spaced-comment": 0,
+    "strict": 0,
+    "import/prefer-default-export": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/first": 0,
+    "no-use-before-define": 0,
+    "react/button-has-type": 0,
+    "react/no-array-index-key": 0,
+    "react/destructuring-assignment": 0,
+    "react/jsx-curly-newline": 0,
+    "react/jsx-filename-extension": [0, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-one-expression-per-line": [0, { "allow": "single-child" }],
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-wrap-multilines": 0
+  },
+  "ignorePatterns": ["scripts/*.js"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}

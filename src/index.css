@@ -1,3 +1,11 @@
+:root {
+    --primary-color: #E6E2AF;
+    --secondary-color: lightgray;
+    --primary-background: #272B35;
+    --secondary-background: #faf9ef;
+    --tertiary-background: #6a695e;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -10,7 +18,11 @@ body {
 }
 
 html, body, #root {
-    background: #FFF;
     height: 100%;
     width: 100%;
+    background: url("./images/background.png");
+}
+
+#root > div {
+    height: 100%;
 }
