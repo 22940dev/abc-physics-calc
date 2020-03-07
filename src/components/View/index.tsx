@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { activeEquation } from "utils";
 import cx from "classnames";
@@ -10,13 +10,17 @@ const View: React.FunctionComponent = () => {
   const { equation } = useParams();
   const activeEq = activeEquation(equation);
 
+  const [{ name }, { funcName }, { formula }] = activeEquation(equation)[0];
+  const [{ blueprint }, { variables }] = formula;
+
+  useEffect(() => {
+    document.title = `Astrodynamics - ${name}`;
+  }, [equation]);
+
   if (activeEq.length === 0) {
     history.push("/");
     return null;
   }
-
-  const [{ name }, { funcName }, { formula }] = activeEquation(equation)[0];
-  const [{ blueprint }, { variables }] = formula;
 
   return (
     <div className={cx("px-4 py-3", styles.view)}>
