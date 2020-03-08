@@ -10,6 +10,16 @@
     margin-bottom: 0;
   }
 
+  a {
+    &:visited, &:link {
+      color: var(--secondary-color);
+    }
+
+    &:hover,  &:active {
+      color: var(--primary-color);
+    }
+  }
+
   ul, li {
     padding: 0;
     margin: 0;
@@ -32,14 +42,6 @@
       align-items: center;
       justify-content: left;
       border-left: 4px solid transparent;
-
-     &:visited, &:link {
-        color: var(--secondary-color);
-      }
-
-      &:hover,  &:active {
-        color: var(--primary-color);
-      }
     }
   }
 }
@@ -48,6 +50,22 @@
   background: rgba(#E6E2AF, .2);
   border-color: var(--primary-color) !important;
   &:link, &:visited {
+    color: var(--primary-color) !important;
+  }
+}
+
+.sidebarBody {
+  height: calc(100% - 145px);
+}
+
+.sidebarFooter {
+  font-size: 14px;
+  color: var(--secondary-color);
+  height: 145px;
+  border-top: 1px solid var(--secondary-color);
+  text-align: center;
+
+  a {
     color: var(--primary-color) !important;
   }
 }
