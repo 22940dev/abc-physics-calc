@@ -69,33 +69,40 @@ const Equation: React.FunctionComponent<EquationProps> = ({
   };
 
   return (
-    <Card className={cx("p-3 col-6", styles.card)}>
-      {decompressedFormulaVariables(variables).map(
-        (field: any, index: number) => {
-          return field.desc ? (
-            <EquationInput
-              key={field.desc}
-              field={field}
-              inputValues={inputValues}
-              index={index}
-              handleInputChange={handleInputChange}
-            />
-          ) : (
-            <EquationInputWithSelect
-              key={field[0][0].desc}
-              field={field[0]}
-              selectCategory={field[1].selectCategory}
-              inputValues={inputValues}
-              index={index}
-              selectIndexes={selectIndexes}
-              handleInputChange={handleInputChange}
-              handleSelectChange={handleSelectChange}
-            />
-          );
-        }
-      )}
-      Result
-      <input value={result} readOnly />
+    <Card className={cx("pl-0", styles.card)}>
+      <Card.Header>
+        <h5 className="mb-0">Calculation</h5>
+      </Card.Header>
+      <Card.Body>
+        {decompressedFormulaVariables(variables).map(
+          (field: any, index: number) => {
+            return field.desc ? (
+              <EquationInput
+                key={field.desc}
+                field={field}
+                inputValues={inputValues}
+                index={index}
+                handleInputChange={handleInputChange}
+              />
+            ) : (
+              <EquationInputWithSelect
+                key={field[0][0].desc}
+                field={field[0]}
+                selectCategory={field[1].selectCategory}
+                inputValues={inputValues}
+                index={index}
+                selectIndexes={selectIndexes}
+                handleInputChange={handleInputChange}
+                handleSelectChange={handleSelectChange}
+              />
+            );
+          }
+        )}
+      </Card.Body>
+      <Card.Footer className="d-flex flex-column pt-1">
+        <div>Result</div>
+        <input value={result} readOnly />
+      </Card.Footer>
     </Card>
   );
 };
