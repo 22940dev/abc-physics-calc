@@ -106,7 +106,7 @@ const Equation: React.FunctionComponent<EquationProps> = ({
           {result}{" "}
           {missingInputValue && (
             <span className={cx("ml-1", styles.resultNotice)}>
-              (In order to see the result provide values to all inputs)
+              (In order to see the result provide values to all fields)
             </span>
           )}
         </div>
