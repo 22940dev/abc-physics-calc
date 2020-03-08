@@ -11,7 +11,7 @@ const Sidebar: React.FunctionComponent = () => {
     <nav className={cx("pt-2 pl-2", styles.sidebar)}>
       <h6 className="mb-0">Astrodynamics</h6>
       <ul>
-        {ad.map(([{ name }]) => (
+        {ad.map(({ name }) => (
           <li key={`sidebar-${name}`}>
             <NavLink
               activeClassName={styles.active}

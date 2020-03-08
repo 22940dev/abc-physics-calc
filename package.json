@@ -34,13 +34,15 @@
     "esm": "^3.2.25",
     "fs": "^0.0.1-security",
     "js-yaml": "^3.13.1",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "standard-version": "^7.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "release": "standard-version",
     "prettier:tokens": "prettier --write ./src/generated-tokens/**/*.json",
     "extract:tokens": "node -r esm scripts/extract-tokens.js && yarn prettier:tokens"
   },

@@ -6,10 +6,8 @@ import variableTokens from "../../generated-tokens/astrodynamics/variables.json"
 import styles from "./styles.module.scss";
 
 const Blueprint: React.FunctionComponent<BlueprintProps> = ({
-  formula
+  formula: { blueprint, variables }
 }: BlueprintProps) => {
-  const [{ blueprint }, { variables }] = formula;
-
   const normalizedVariableTokens: any = Object.entries(variableTokens).filter(
     v =>
       v[0] !== "TVSELECT_L" &&

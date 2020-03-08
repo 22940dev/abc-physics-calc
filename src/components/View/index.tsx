@@ -12,8 +12,8 @@ const View: React.FunctionComponent = () => {
   const { equation } = useParams();
   const activeEq = activeEquation(equation);
 
-  const [{ name }, { funcName }, { formula }] = activeEquation(equation)[0];
-  const [, { variables }] = formula;
+  const { name, funcName, formula } = activeEquation(equation)[0];
+  const { variables } = formula;
 
   useEffect(() => {
     document.title = `Astrodynamics - ${name}`;
