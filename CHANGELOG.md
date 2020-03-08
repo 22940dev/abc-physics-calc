@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/sbsrnt/physics-calc-v2/compare/v1.0.1...v1.0.2) (2020-03-08)
+
+
+### Bug Fixes
+
+* add redirect file for netlify ([887cdba](https://github.com/sbsrnt/physics-calc-v2/commit/887cdba5960153a3b7276420fac61be59fc7d7f0))
+
 ### 1.0.1 (2020-03-08)
 
 
