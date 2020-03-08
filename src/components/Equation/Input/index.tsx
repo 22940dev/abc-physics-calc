@@ -7,12 +7,16 @@ const EquationInput: React.FunctionComponent<EquationInputProps> = ({
   index,
   handleInputChange
 }: EquationInputProps) => (
-  <div>
-    {field.desc}
+  <div className="mb-3">
+    <label className="mb-0" htmlFor={field.desc}>
+      {field.desc}
+    </label>
     <div className="d-flex">
       <input
+        id={field.desc}
         type="number"
         placeholder="0"
+        className="mr-2"
         value={inputValues[index]}
         disabled={!!field.value}
         onChange={(e): void => handleInputChange(index, e.target.value)}

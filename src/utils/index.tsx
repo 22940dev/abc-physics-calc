@@ -3,9 +3,7 @@ import tokenVariables from "../generated-tokens/astrodynamics/variables.json";
 import astrodynamics from "../generated-tokens/astrodynamics/formulas.json";
 
 export const activeEquation = (params: string | undefined) =>
-  Object.values(astrodynamics).filter(
-    ([{ name }]) => kebabCase(name) === params
-  );
+  Object.values(astrodynamics).filter(({ name }) => kebabCase(name) === params);
 
 export const decompressedFormulaVariables = (
   variables: (string | string[])[] | undefined
@@ -31,11 +29,6 @@ export const decompressedFormulaVariables = (
       return [...acc, [value, { selectCategory: sCat }]];
     }
 
-    if (pureVariable) {
-      return [
-        ...acc,
-        value.reduce((a: object, v: object) => ({ ...a, ...v }), {})
-      ];
-    }
+    if (pureVariable) return [...acc, value];
     return acc;
   }, []);
