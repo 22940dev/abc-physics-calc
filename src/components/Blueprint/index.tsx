@@ -9,6 +9,7 @@ const Blueprint: React.FunctionComponent<BlueprintProps> = ({
   formula
 }: BlueprintProps) => {
   const [{ blueprint }, { variables }] = formula;
+
   const normalizedVariableTokens: any = Object.entries(variableTokens).filter(
     v =>
       v[0] !== "TVSELECT_L" &&
@@ -16,13 +17,6 @@ const Blueprint: React.FunctionComponent<BlueprintProps> = ({
       _.flatten(variables).includes(v[0])
   );
 
-  const reducedVariableTokens = normalizedVariableTokens.reduce(
-    (acc, value) => {
-      const mergedValues = value[1].reduce((a, v) => ({ ...a, ...v }), {});
-      return [...acc, mergedValues];
-    },
-    []
-  );
   return (
     <Card className={styles.card}>
       <Card.Header>
@@ -41,7 +35,7 @@ const Blueprint: React.FunctionComponent<BlueprintProps> = ({
                 Where:
               </td>
             </tr>
-            {reducedVariableTokens.map(value => (
+            {normalizedVariableTokens.map(({ 1: value }) => (
               <tr key={`blueprint_${value.desc}`}>
                 <td
                   className="p-1"

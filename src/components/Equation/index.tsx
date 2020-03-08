@@ -34,6 +34,7 @@ const Equation: React.FunctionComponent<EquationProps> = ({
   const [inputValues, setInputValues] = useState(initialInputState);
   const [selectValues, setSelectValues] = useState(initialSelectState);
   const [result, setResult] = useState(0);
+  const missingInputValue = inputValues.some(v => v === "");
 
   /**
    * Effects
@@ -49,7 +50,7 @@ const Equation: React.FunctionComponent<EquationProps> = ({
     const calculatedValue = inputsWithSelects
       ? formulas[funcName](...numericInputValues)(...selectValues)
       : formulas[funcName](...numericInputValues);
-    const r = inputValues.some(v => v === "") ? 0 : calculatedValue;
+    const r = missingInputValue ? 0 : calculatedValue;
 
     setResult(r);
   }, [inputValues, selectValues]);
@@ -86,7 +87,7 @@ const Equation: React.FunctionComponent<EquationProps> = ({
               />
             ) : (
               <EquationInputWithSelect
-                key={field[0][0].desc}
+                key={field[0].desc}
                 field={field[0]}
                 selectCategory={field[1].selectCategory}
                 inputValues={inputValues}
@@ -100,8 +101,15 @@ const Equation: React.FunctionComponent<EquationProps> = ({
         )}
       </Card.Body>
       <Card.Footer className="d-flex flex-column pt-1">
-        <div>Result</div>
-        <input value={result} readOnly />
+        <div>Result:</div>
+        <div className={cx("d-flex align-items-center", styles.result)}>
+          {result}{" "}
+          {missingInputValue && (
+            <span className={cx("ml-1", styles.resultNotice)}>
+              (In order to see the result provide values to all inputs)
+            </span>
+          )}
+        </div>
       </Card.Footer>
     </Card>
   );

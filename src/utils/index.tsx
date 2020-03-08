@@ -31,11 +31,6 @@ export const decompressedFormulaVariables = (
       return [...acc, [value, { selectCategory: sCat }]];
     }
 
-    if (pureVariable) {
-      return [
-        ...acc,
-        value.reduce((a: object, v: object) => ({ ...a, ...v }), {})
-      ];
-    }
+    if (pureVariable) return [...acc, value];
     return acc;
   }, []);

@@ -1,161 +1,138 @@
 {
-  "TVCONST_0": [
-    { "desc": "Boltzmann Constant" },
-    { "symbol": "k<sub>B</sub>" },
-    { "value": 1.3806488e-23 },
-    { "unit": "J/K" }
-  ],
-  "TVCONST_1": [
-    { "desc": "Cosmological Constant" },
-    { "symbol": "Λ" },
-    { "value": 2.036e-35 },
-    { "unit": "J/K" }
-  ],
-  "TVCONST_2": [
-    { "desc": "Planck Constant" },
-    { "symbol": "h" },
-    { "value": 6.62606876e-34 },
-    { "unit": "J/s" }
-  ],
-  "TVCONST_3": [
-    { "desc": "Proton Mass Constant" },
-    { "symbol": "m<sub>p</sub>" },
-    { "value": 1.6726219236951e-27 }
-  ],
-  "TVCONST_4": [
-    { "desc": "Speed of Light in Vacuum" },
-    { "symbol": "c" },
-    { "value": 299792458 },
-    { "unit": "m/s" }
-  ],
-  "TVCONST_5": [
-    { "desc": "Gravitational Constant" },
-    { "symbol": "G" },
-    { "value": 6.62606876e-34 },
-    { "unit": "m<sup>3</sup> kg<sup>-1</sup> s<sup>-2</sup>" }
-  ],
-  "TVCONST_6": [
-    { "desc": "Hubble Parameter At Present Epoch" },
-    { "symbol": "H" },
-    { "value": 2.3e-18 },
-    { "unit": "s<sup>-1</sup>" }
-  ],
-  "TVAD_0": [
-    { "desc": "Absolute Magnitude" },
-    { "symbol": "M<sub>I</sub>" },
-    { "unit": "M" }
-  ],
-  "TVAD_1": [
-    { "desc": "Observed Maximum Rotation Velocity" },
-    { "symbol": "V<sub>rot</sub>" }
-  ],
-  "TVAD_2": [{ "desc": "Galactic Inclination" }, { "symbol": "i" }],
-  "TVAD_3": [
-    { "desc": "Pulsation Period" },
-    { "symbol": "P<sub>d</sub>" },
-    { "unit": "s<sup>-1</sup>" }
-  ],
-  "TVAD_4": [
-    { "desc": "Relativistic Pressure" },
-    { "symbol": "P" },
-    { "unit": "N/m<sup>2</sup>" }
-  ],
-  "TVAD_5": [
-    { "desc": "Density" },
-    { "symbol": "p" },
-    { "unit": "kg/m<sup>3</sup>" }
-  ],
-  "TVAD_6": [
-    { "desc": "Neutron Mass" },
-    { "symbol": "mn" },
-    { "unit": "m<sup>2</sup>kg/s" }
-  ],
-  "TVAD_7": [
-    { "desc": "Evaporation Time" },
-    { "symbol": "τ<sub>e</sub>" },
-    { "unit": "sec" }
-  ],
-  "TVAD_8": [{ "desc": "Mass of Body" }, { "symbol": "m" }],
-  "TVAD_9": [{ "desc": "Solar Mass" }, { "symbol": "M<sub>☉</sub>" }],
-  "TVAD_10": [
-    { "desc": "Degeneracy Pressure" },
-    { "symbol": "p" },
-    { "unit": "Pa" }
-  ],
-  "TVAD_11": [
-    { "desc": "Gravitational Wave Radiation" },
-    { "symbol": "L<sub>g</sub>" },
-    { "unit": "Pa" }
-  ],
-  "TVAD_12": [{ "desc": "Mass Separation" }, { "symbol": "a" }],
-  "TVAD_13": [{ "desc": "First Orbiting Mass" }, { "symbol": "m<sub>1</sub>" }],
-  "TVAD_14": [
-    { "desc": "Second Orbiting Mass" },
-    { "symbol": "m<sub>2</sub>" }
-  ],
-  "TVAD_15": [
-    { "desc": "Critical Density" },
-    { "symbol": "ρ<sub>crit</sub>" },
-    { "unit": "kg/m<sup>3</sup>" }
-  ],
-  "TVAD_16": [
-    { "desc": "Hubble Parameter" },
-    { "symbol": "H" },
-    { "unit": "s<sup>-1</sup>" }
-  ],
-  "TVAD_17": [
-    { "desc": "Curvature Density Parameter" },
-    { "symbol": "Ωk" },
-    { "unit": "kg/m<sup>3</sup>" }
-  ],
-  "TVAD_18": [{ "desc": "Curvature" }, { "symbol": "k" }],
-  "TVAD_19": [{ "desc": "Cosmic Scale Factor" }, { "symbol": "R" }],
-  "TVAD_20": [
-    { "desc": "Lambda Density Parameter" },
-    { "symbol": "Ω<sub>Λ</sub>" }
-  ],
-  "TVAD_21": [{ "desc": "Stellar Mass" }, { "symbol": "M" }],
-  "TVAD_22": [
-    { "desc": "Thomson Cross Section" },
-    { "symbol": "σ<sub>T</sub>" }
-  ],
-  "TVAD_23": [
-    { "desc": "Eddington Limiting Luminosity" },
-    { "symbol": "L<sub>E</sub>" }
-  ],
-  "TVAD_24": [
-    { "desc": "Black Hole Gravitational Redshift" },
-    { "symbol": "v<sub>∞</sub>/v<sub>r</sub>" }
-  ],
-  "TVAD_25": [{ "desc": "Distance from Mass Center" }, { "symbol": "r" }],
-  "TVAD_26": [
-    { "desc": "Luminosity of Cepheid Variable" },
-    { "symbol": "log<sub>10</sub>(L)/L<sub>☉</sub>" }
-  ],
-  "TVAD_27": [{ "desc": "Chandrasekhar Mass" }, { "symbol": "M<sub>ch</sub>" }],
-  "TVAD_28": [{ "desc": "Hubble Parameter at Redshift" }, { "symbol": "H(z)" }],
-  "TVAD_29": [{ "desc": "Redshift" }, { "symbol": "z" }],
-  "TVAD_30": [{ "desc": "Ring Angular Radius" }, { "symbol": "θ" }],
-  "TVAD_31": [{ "desc": "Lens Mass" }, { "symbol": "M" }],
-  "TVAD_32": [
-    { "desc": "Distance from Observer to Source" },
-    { "symbol": "ds" }
-  ],
-  "TVAD_33": [{ "desc": "Distance from Observer to Lens" }, { "symbol": "d" }],
-  "TVAD_34": [{ "desc": "Distance from Observer to Lens" }, { "symbol": "d" }],
-  "TVAD_35": [{ "desc": "Radial Velocity" }, { "symbol": "v<sub>r</sub>" }],
-  "TVAD_36": [{ "desc": "Proper Distance" }, { "symbol": "d" }],
-  "TVAD_37": [
-    { "desc": "Black Hole Schwarzschild Radius" },
-    { "symbol": "r<sub>s</sub>" }
-  ],
-  "TVAD_38": [
-    { "desc": "Observed Wavelength" },
-    { "symbol": "λ<sub>obs</sub>" }
-  ],
-  "TVAD_39": [{ "desc": "Emitted Wavelength" }, { "symbol": "λ<sub>em</sub>" }],
-  "TVAD_40": [{ "desc": "Friedmann Equation" }, { "symbol": "h" }],
-  "TVAD_41": [{ "desc": "Black Hole Temperature" }, { "symbol": "τ<sub>KH" }],
+  "TVCONST_0": {
+    "desc": "Boltzmann Constant",
+    "symbol": "k<sub>B</sub>",
+    "value": 1.3806488e-23,
+    "unit": "J/K"
+  },
+  "TVCONST_1": {
+    "desc": "Cosmological Constant",
+    "symbol": "Λ",
+    "value": 2.036e-35,
+    "unit": "J/K"
+  },
+  "TVCONST_2": {
+    "desc": "Planck Constant",
+    "symbol": "h",
+    "value": 6.62606876e-34,
+    "unit": "J/s"
+  },
+  "TVCONST_3": {
+    "desc": "Proton Mass Constant",
+    "symbol": "m<sub>p</sub>",
+    "value": 1.6726219236951e-27
+  },
+  "TVCONST_4": {
+    "desc": "Speed of Light in Vacuum",
+    "symbol": "c",
+    "value": 299792458,
+    "unit": "m/s"
+  },
+  "TVCONST_5": {
+    "desc": "Gravitational Constant",
+    "symbol": "G",
+    "value": 6.62606876e-34,
+    "unit": "m<sup>3</sup> kg<sup>-1</sup> s<sup>-2</sup>"
+  },
+  "TVCONST_6": {
+    "desc": "Hubble Parameter At Present Epoch",
+    "symbol": "H",
+    "value": 2.3e-18,
+    "unit": "s<sup>-1</sup>"
+  },
+  "TVAD_0": {
+    "desc": "Absolute Magnitude",
+    "symbol": "M<sub>I</sub>",
+    "unit": "M"
+  },
+  "TVAD_1": {
+    "desc": "Observed Maximum Rotation Velocity",
+    "symbol": "V<sub>rot</sub>"
+  },
+  "TVAD_2": { "desc": "Galactic Inclination", "symbol": "i" },
+  "TVAD_3": {
+    "desc": "Pulsation Period",
+    "symbol": "P<sub>d</sub>",
+    "unit": "s<sup>-1</sup>"
+  },
+  "TVAD_4": {
+    "desc": "Relativistic Pressure",
+    "symbol": "P",
+    "unit": "N/m<sup>2</sup>"
+  },
+  "TVAD_5": { "desc": "Density", "symbol": "p", "unit": "kg/m<sup>3</sup>" },
+  "TVAD_6": {
+    "desc": "Neutron Mass",
+    "symbol": "mn",
+    "unit": "m<sup>2</sup>kg/s"
+  },
+  "TVAD_7": {
+    "desc": "Evaporation Time",
+    "symbol": "τ<sub>e</sub>",
+    "unit": "sec"
+  },
+  "TVAD_8": { "desc": "Mass of Body", "symbol": "m" },
+  "TVAD_9": { "desc": "Solar Mass", "symbol": "M<sub>☉</sub>" },
+  "TVAD_10": { "desc": "Degeneracy Pressure", "symbol": "p", "unit": "Pa" },
+  "TVAD_11": {
+    "desc": "Gravitational Wave Radiation",
+    "symbol": "L<sub>g</sub>",
+    "unit": "Pa"
+  },
+  "TVAD_12": { "desc": "Mass Separation", "symbol": "a" },
+  "TVAD_13": { "desc": "First Orbiting Mass", "symbol": "m<sub>1</sub>" },
+  "TVAD_14": { "desc": "Second Orbiting Mass", "symbol": "m<sub>2</sub>" },
+  "TVAD_15": {
+    "desc": "Critical Density",
+    "symbol": "ρ<sub>crit</sub>",
+    "unit": "kg/m<sup>3</sup>"
+  },
+  "TVAD_16": {
+    "desc": "Hubble Parameter",
+    "symbol": "H",
+    "unit": "s<sup>-1</sup>"
+  },
+  "TVAD_17": {
+    "desc": "Curvature Density Parameter",
+    "symbol": "Ωk",
+    "unit": "kg/m<sup>3</sup>"
+  },
+  "TVAD_18": { "desc": "Curvature", "symbol": "k" },
+  "TVAD_19": { "desc": "Cosmic Scale Factor", "symbol": "R" },
+  "TVAD_20": { "desc": "Lambda Density Parameter", "symbol": "Ω<sub>Λ</sub>" },
+  "TVAD_21": { "desc": "Stellar Mass", "symbol": "M" },
+  "TVAD_22": { "desc": "Thomson Cross Section", "symbol": "σ<sub>T</sub>" },
+  "TVAD_23": {
+    "desc": "Eddington Limiting Luminosity",
+    "symbol": "L<sub>E</sub>"
+  },
+  "TVAD_24": {
+    "desc": "Black Hole Gravitational Redshift",
+    "symbol": "v<sub>∞</sub>/v<sub>r</sub>"
+  },
+  "TVAD_25": { "desc": "Distance from Mass Center", "symbol": "r" },
+  "TVAD_26": {
+    "desc": "Luminosity of Cepheid Variable",
+    "symbol": "log<sub>10</sub>(L)/L<sub>☉</sub>"
+  },
+  "TVAD_27": { "desc": "Chandrasekhar Mass", "symbol": "M<sub>ch</sub>" },
+  "TVAD_28": { "desc": "Hubble Parameter at Redshift", "symbol": "H(z)" },
+  "TVAD_29": { "desc": "Redshift", "symbol": "z" },
+  "TVAD_30": { "desc": "Ring Angular Radius", "symbol": "θ" },
+  "TVAD_31": { "desc": "Lens Mass", "symbol": "M" },
+  "TVAD_32": { "desc": "Distance from Observer to Source", "symbol": "ds" },
+  "TVAD_33": { "desc": "Distance from Observer to Lens", "symbol": "d" },
+  "TVAD_34": { "desc": "Distance from Observer to Lens", "symbol": "d" },
+  "TVAD_35": { "desc": "Radial Velocity", "symbol": "v<sub>r</sub>" },
+  "TVAD_36": { "desc": "Proper Distance", "symbol": "d" },
+  "TVAD_37": {
+    "desc": "Black Hole Schwarzschild Radius",
+    "symbol": "r<sub>s</sub>"
+  },
+  "TVAD_38": { "desc": "Observed Wavelength", "symbol": "λ<sub>obs</sub>" },
+  "TVAD_39": { "desc": "Emitted Wavelength", "symbol": "λ<sub>em</sub>" },
+  "TVAD_40": { "desc": "Friedmann Equation", "symbol": "h" },
+  "TVAD_41": { "desc": "Black Hole Temperature", "symbol": "τ<sub>KH" },
   "TVSELECT_M": "mass",
   "TVSELECT_L": "length"
 }
