@@ -1,9 +1,8 @@
-/* eslint-disable */
 /**
  * FORMULAS - ASTRODYNAMICS
  */
 
-import {sin} from "../utils";
+import { sin } from "../utils";
 
 /**
  * Absolute Magnitude of Sun I band
@@ -46,8 +45,8 @@ export const relativisticPressure = (
   p: number,
   mn: number
 ) => (mnPrefix: number): number =>
-  (((h / (2 * Math.PI)) * c * Math.pow(3 * Math.pow(Math.PI, 2), 1 / 3)) / 4) *
-  Math.pow(p / (mn * mnPrefix), 4 / 3);
+  (((h / (2 * Math.PI)) * c * (3 * Math.PI ** 2) ** (1 / 3)) / 4) *
+  (p / (mn * mnPrefix)) ** (4 / 3);
 
 /**
  * Black Hole Evaporation Time
@@ -63,7 +62,7 @@ export const relativisticPressure = (
 export const blackHoleEvaporationTime = (m: number, mo: number) => (
   mPrefix: number,
   moPrefix: number
-): number => ((Math.pow(m, 3) * mPrefix) / Math.pow(mo, 3)) * moPrefix * 10e66;
+): number => ((m ** 3 * mPrefix) / mo ** 3) * moPrefix * 10e66;
 
 /**
  * Neutron Star Degeneracy Pressure by Non-Relativistic Neutrons
@@ -81,9 +80,9 @@ export const neutronStarDegeneracyPressureByNonRelativisticNeutrons = (
   mn: number,
   p: number
 ) => (mnPrefix: number): number =>
-  (Math.pow(3 * Math.pow(Math.PI, 2), 2 / 3) / 5) *
-  ((Math.pow((h / 2) * Math.PI, 2) / mn) * mnPrefix) *
-  Math.pow((p / mn) * mnPrefix, 5 / 3);
+  ((3 * Math.PI ** 2) ** (2 / 3) / 5) *
+  ((h / (2 * Math.PI)) ** 2 / (mn * mnPrefix)) *
+  (p / (mn * mnPrefix)) ** (5 / 3);
 
 /**
  * Gravitational Wave Luminosity
@@ -105,14 +104,14 @@ export const gravitationalWaveLuminosity = (
   G: number,
   a: number,
   m1: number,
-  m2: number,
+  m2: number
 ) => (aPrefix: number, m1Prefix: number, m2Prefix: number): number =>
   ((32 / 5) *
-    (Math.pow(G, 4) / Math.pow(c, 5)) *
-    (Math.pow(m1 * m1Prefix, 2) *
-      Math.pow(m2 * m2Prefix, 2) *
+    (G ** 4 / c ** 5) *
+    ((m1 * m1Prefix) ** 2 *
+      (m2 * m2Prefix) ** 2 *
       (m1 * m1Prefix + m2 * m2Prefix))) /
-  Math.pow(a * aPrefix, 5);
+  (a * aPrefix) ** 5;
 
 /**
  * Cosmology Critical Density
@@ -124,7 +123,7 @@ export const gravitationalWaveLuminosity = (
  * @result ρcrit - Critical Density
  */
 export const cosmologyCriticalDensity = (G: number, H: number): number =>
-  (3 * Math.pow(H, 2)) / (8 * Math.PI * G);
+  (3 * H ** 2) / (8 * Math.PI * G);
 
 /**
  * Cosmological Curvature Density Parameter
@@ -142,7 +141,7 @@ export const cosmologicalCurvatureDensityParameter = (
   k: number,
   R: number,
   H: number
-): number => -(k * Math.pow(c, 2)) / (Math.pow(R, 2) * Math.pow(H, 2));
+): number => -(k * c ** 2) / (R ** 2 * H ** 2);
 
 /**
  * Cosmological Lambda Density Parameter
@@ -156,7 +155,7 @@ export const cosmologicalCurvatureDensityParameter = (
 export const cosmologicalLambdaDensityParameter = (
   A: number,
   H: number
-): number => A / (3 * Math.pow(H, 2));
+): number => A / (3 * H ** 2);
 
 /**
  * Eddington Luminosity Limit
@@ -213,9 +212,7 @@ export const blackholeGravitationalRedshift = (
   M: number,
   r: number
 ) => (MPrefix: number, rPrefix: number): number =>
-  Math.sqrt(
-    Math.abs(1 - (2 * G * (M * MPrefix)) / (r * rPrefix * Math.pow(c, 2)))
-  );
+  Math.sqrt(Math.abs(1 - (2 * G * (M * MPrefix)) / (r * rPrefix * c ** 2)));
 
 /**
  * Luminosity of Cepheid Variable
@@ -248,7 +245,7 @@ export const chandrasekharMass = (Mo: number): number => 1.46 * Mo;
  * @result H(z) - Hubble Constant At Redshift
  */
 export const hubbleParameterAtRedshift = (H: number, z: number): number =>
-  H * Math.pow(1 + z, 3 / 2);
+  H * (1 + z) ** (3 / 2);
 
 /**
  * Hubble Law Radial Velocity
@@ -287,8 +284,7 @@ export const angularRadiusOfEinsteinRing = (
   d: number
 ) => (MPrefix: number, dsPrefix: number, dPrefix: number): number =>
   Math.sqrt(
-    (((4 * G * (M * MPrefix)) / Math.pow(c, 2)) *
-      (ds * dsPrefix - d * dPrefix)) /
+    (((4 * G * (M * MPrefix)) / c ** 2) * (ds * dsPrefix - d * dPrefix)) /
       (ds * dsPrefix * (d * dPrefix))
   );
 
@@ -306,8 +302,8 @@ export const angularRadiusOfEinsteinRing = (
 export const blackholeSchwarzschildRadius = (
   c: number,
   G: number,
-  M: number,
-) => (MPrefix: number): number => (2 * G * (M * MPrefix)) / Math.pow(c, 2);
+  M: number
+) => (MPrefix: number): number => (2 * G * (M * MPrefix)) / c ** 2;
 
 /**
  * Cosmological Redshift
@@ -340,11 +336,9 @@ export const friedmannEquation = (
   G: number,
   p: number,
   k: number,
-  R: number,
+  R: number
 ): number =>
-  ((8 * Math.PI) / 3) * G * p * Math.pow(R, 2) -
-  k * Math.pow(c, 2) +
-  (A * Math.pow(R, 2)) / 3;
+  ((8 * Math.PI) / 3) * G * p * R ** 2 - k * c ** 2 + (A * R ** 2) / 3;
 
 /**
  * Friedmann Equation Based on Pressure
@@ -365,10 +359,9 @@ export const friedmannEquationBasedOnPressure = (
   G: number,
   P: number,
   p: number,
-  R: number,
+  R: number
 ): number =>
-  ((-4 * Math.PI) / 3) * (G * R) * (p + (3 * P) / Math.pow(c, 2)) +
-  (A * Math.pow(R, 2)) / 3;
+  ((-4 * Math.PI) / 3) * (G * R) * (p + (3 * P) / c ** 2) + (A * R ** 2) / 3;
 
 /**
  * Black Hole Temperature
@@ -388,6 +381,6 @@ export const blackholeTemperature = (
   h: number,
   c: number,
   G: number,
-  M: number,
+  M: number
 ) => (MPrefix: number): number =>
-  ((h / 2) * Math.PI * Math.pow(c, 3)) / (8 * Math.PI * G * (M * MPrefix) * k);
+  ((h / 2) * Math.PI * c ** 3) / (8 * Math.PI * G * (M * MPrefix) * k);
