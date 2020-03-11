@@ -32,3 +32,7 @@ export const decompressedFormulaVariables = (
     if (pureVariable) return [...acc, value];
     return acc;
   }, []);
+
+export const toRadians = (value: number): number => value * (Math.PI / 100);
+
+export const sin = (value: number): number => Math.sin(toRadians(value));

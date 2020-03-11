@@ -48,7 +48,7 @@
     "funcName": "neutronStarDegeneracyPressureByNonRelativisticNeutrons",
     "formula": {
       "blueprint": "<i class=\"variable\">P</i> = [ (3π<sup>2</sup>)<sup>2/3</sup> / 5 ] * [ (<i class=\"variable\">h</i> / (2π))<sup>2</sup> / <i class=\"variable\">m<sub>n</sub></i> ] * (<i class=\"variable\">ρ</i> / <i class=\"variable\">m<sub>n</sub></i>)<sup>5/3</sup>",
-      "variables": ["TVCONST_2", ["TVAD_6", "TVSELECT_M"]],
+      "variables": ["TVCONST_2", "TVAD_5", ["TVAD_6", "TVSELECT_M"]],
       "result": "TVAD_10,"
     }
   },
@@ -122,7 +122,7 @@
     "name": "Black Hole Gravitational Redshift",
     "funcName": "blackholeGravitationalRedshift",
     "formula": {
-      "blueprint": "<i class=\"variable\">v<sub>∞</sub></i> / <i class=\"variable\">v<sub>r</sub></i> = √<i class=\"sqrt-overline\"> 1 - (2 * <i class=\"variable\">G</i> * <i class=\"variable\">M</i> / <i class=\"variable\">r</i> * <i class=\"variable\">c</i><sup>2</sup>)</i>",
+      "blueprint": "<i class=\"variable\">v<sub>∞</sub></i> / <i class=\"variable\">v<sub>r</sub></i> = √<span class=\"sqrt-overline\"> 1 - (2 * <i class=\"variable\">G</i> * <i class=\"variable\">M</i> / <i class=\"variable\">r</i> * <i class=\"variable\">c</i><sup>2</sup>)</span>",
       "variables": [
         "TVCONST_5",
         "TVCONST_4",
@@ -218,18 +218,17 @@
     }
   },
   "TFAD_25": {
-    "name": "Equation Based on Pressure",
-    "funcName": "friedmannEquation",
+    "name": "Friedmann Equation Based on Pressure",
+    "funcName": "friedmannEquationBasedOnPressure",
     "formula": {
       "blueprint": "<i class=\"variable\">h</i> = (-4π / 3) * (<i class=\"variable\">G</i> * <i class=\"variable\">R</i>) * [ <i class=\"variable\">ρ</i> + (3 * <i class=\"variable\">P</i> / <i class=\"variable\">c</i><sup>2</sup>) ] + (<i class=\"variable\">Λ</i> * <i class=\"variable\">R</i><sup>2</sup> / 3)",
       "variables": [
         "TVCONST_5",
         "TVCONST_4",
         "TVCONST_1",
+        "TVAD_4",
         "TVAD_5",
-        "TVAD_19",
-        "TVAD_17",
-        "TVAD_4"
+        "TVAD_19"
       ],
       "result": "TVAD_40"
     }
@@ -244,7 +243,7 @@
         "TVCONST_4",
         "TVCONST_5",
         "TVCONST_0",
-        "TVAD_8"
+        ["TVAD_8", "TVSELECT_M"]
       ],
       "result": "TVAD_41"
     }

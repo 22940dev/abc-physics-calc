@@ -3,6 +3,7 @@ import { decompressedFormulaVariables } from "utils";
 import { Card } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import cx from "classnames";
+import isNaN from "lodash/isNaN";
 import { EquationProps } from "./interface";
 import EquationInput from "./Input";
 import EquationInputWithSelect from "./InputWithSelect";
@@ -50,6 +51,7 @@ const Equation: React.FunctionComponent<EquationProps> = ({
     const calculatedValue = inputsWithSelects
       ? formulas[funcName](...numericInputValues)(...selectValues)
       : formulas[funcName](...numericInputValues);
+    // console.log(calculatedValue, numericInputValues, inputsWithSelects);
     const r = missingInputValue ? 0 : calculatedValue;
 
     setResult(r);
@@ -103,7 +105,7 @@ const Equation: React.FunctionComponent<EquationProps> = ({
       <Card.Footer className="d-flex flex-column pt-1">
         <div>Result:</div>
         <div className={cx("d-flex align-items-center", styles.result)}>
-          {result}{" "}
+          {isNaN(result) ? "Incorrect values." : result}
           {missingInputValue && (
             <span className={cx("ml-1", styles.resultNotice)}>
               (In order to see the result provide values to all fields)
