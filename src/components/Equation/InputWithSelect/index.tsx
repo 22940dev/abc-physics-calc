@@ -1,5 +1,6 @@
 import React from "react";
 import { EquationInputWithSelectProps } from "../interface";
+import Select from "../../Select";
 
 const EquationInputWithSelect: React.FunctionComponent<EquationInputWithSelectProps> = ({
   field,
@@ -29,15 +30,12 @@ const EquationInputWithSelect: React.FunctionComponent<EquationInputWithSelectPr
           value={inputValues[index]}
           onChange={(e): void => handleInputChange(index, e.target.value)}
         />
-        <select
+        <Select
+          category={selectCategory}
           onChange={(e): void =>
             handleSelectChange(selectIndex, +e.target.value)
           }
-        >
-          <option value={1}>1</option>
-          <option value={50}>50</option>
-          <option value={100}>100</option>
-        </select>
+        />
       </div>
     </div>
   );

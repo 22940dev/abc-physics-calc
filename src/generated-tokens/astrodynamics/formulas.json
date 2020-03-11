@@ -172,7 +172,7 @@
     "name": "Angular Radius of Einstein Ring",
     "funcName": "angularRadiusOfEinsteinRing",
     "formula": {
-      "blueprint": "<i class=\"variable\">θ</i> = √<i class=\"sqrt-overline\"> (4 * <i class=\"variable\">G</i> * <i class=\"variable\">M</i> / <i class=\"variable\">c</i><sup>2</sup>) * [ (<i class=\"variable\">d<sub>s</sub></i> - <i class=\"variable\">d</i>) / (<i class=\"variable\">d<sub>s</sub></i> * <i class=\"variable\">d</i>) ]</i>",
+      "blueprint": "<i class=\"variable\">θ</i> = √<span> (4 * <i class=\"variable\">G</i> * <i class=\"variable\">M</i> / <i class=\"variable\">c</i><sup>2</sup>) * [ (<i class=\"variable\">d<sub>s</sub></i> - <i class=\"variable\">d</i>) / (<i class=\"variable\">d<sub>s</sub></i> * <i class=\"variable\">d</i>) ]</span>",
       "variables": [
         "TVCONST_5",
         "TVCONST_4",
