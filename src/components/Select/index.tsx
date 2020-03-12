@@ -73,11 +73,14 @@ const length = [
 
 const Select: React.FunctionComponent<SelectProps> = ({
   category,
-  onChange
+  onChange,
+  selectedValue
 }: SelectProps) => (
-  <select onChange={onChange}>
-    {(category === "L" ? length : mass).map(({ label, value }) => (
-      <option value={value}>{label}</option>
+  <select onChange={onChange} value={selectedValue}>
+    {(category === "L" ? length : mass).map(({ label, value }, i) => (
+      <option key={label} value={value}>
+        {label}
+      </option>
     ))}
   </select>
 );

@@ -9,7 +9,7 @@ export interface EquationInputProps {
     unit: string;
     value: number;
   };
-  inputValues: string[] | number[];
+  inputValue: string | number;
   index: number;
   handleInputChange: (arg0: number, arg1: string) => void;
 }
@@ -17,9 +17,10 @@ export interface EquationInputProps {
 export interface EquationInputWithSelectProps {
   field: any;
   selectCategory: string;
-  inputValues: (string | number)[];
+  inputValue: string | number;
   index: number;
   selectIndexes: any;
+  selectValues: (string | number)[];
   handleInputChange: (arg0: number, arg1: string) => void;
   handleSelectChange: (arg0: number, arg1: number) => void;
 }

@@ -79,11 +79,12 @@ const Equation: React.FunctionComponent<EquationProps> = ({
       <Card.Body>
         {decompressedFormulaVariables(variables).map(
           (field: any, index: number) => {
+            const inputValue = inputValues[index] || "";
             return field.desc ? (
               <EquationInput
                 key={field.desc}
                 field={field}
-                inputValues={inputValues}
+                inputValue={inputValue}
                 index={index}
                 handleInputChange={handleInputChange}
               />
@@ -92,9 +93,10 @@ const Equation: React.FunctionComponent<EquationProps> = ({
                 key={field[0].desc}
                 field={field[0]}
                 selectCategory={field[1].selectCategory}
-                inputValues={inputValues}
+                inputValue={inputValue}
                 index={index}
                 selectIndexes={selectIndexes}
+                selectValues={selectValues}
                 handleInputChange={handleInputChange}
                 handleSelectChange={handleSelectChange}
               />

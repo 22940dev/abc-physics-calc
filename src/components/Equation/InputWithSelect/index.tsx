@@ -5,7 +5,8 @@ import Select from "../../Select";
 const EquationInputWithSelect: React.FunctionComponent<EquationInputWithSelectProps> = ({
   field,
   selectCategory,
-  inputValues,
+  inputValue,
+  selectValues,
   index,
   selectIndexes,
   handleInputChange,
@@ -27,11 +28,12 @@ const EquationInputWithSelect: React.FunctionComponent<EquationInputWithSelectPr
           type="number"
           className="mr-1"
           placeholder="0"
-          value={inputValues[index]}
+          value={inputValue}
           onChange={(e): void => handleInputChange(index, e.target.value)}
         />
         <Select
           category={selectCategory}
+          selectedValue={selectValues[selectIndex]}
           onChange={(e): void =>
             handleSelectChange(selectIndex, +e.target.value)
           }
