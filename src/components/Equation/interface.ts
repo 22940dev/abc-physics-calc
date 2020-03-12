@@ -1,6 +1,7 @@
 export interface EquationProps {
   variables: (string | string[])[] | undefined;
   funcName: string | undefined;
+  resultToken: string;
 }
 
 export interface EquationInputProps {

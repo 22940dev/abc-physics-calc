@@ -40,7 +40,7 @@ TFAD_5:
   formula:
       blueprint: "<i class=\"variable\">P</i> = [ (3π<sup>2</sup>)<sup>2/3</sup> / 5 ] * [ (<i class=\"variable\">h</i> / (2π))<sup>2</sup> / <i class=\"variable\">m<sub>n</sub></i> ] * (<i class=\"variable\">ρ</i> / <i class=\"variable\">m<sub>n</sub></i>)<sup>5/3</sup>"
       variables: [TVCONST_2, TVAD_5, [TVAD_6, TVSELECT_M]]
-      result: TVAD_10,
+      result: TVAD_10
 
 TFAD_6:
   name: Gravitational Wave Luminosity

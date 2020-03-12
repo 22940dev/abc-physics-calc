@@ -27,8 +27,7 @@ const View: React.FunctionComponent = () => {
   }
 
   const { name, funcName, formula } = activeEquation(equation)[0];
-  const { variables } = formula;
-
+  const { variables, result } = formula;
   return (
     <div className={cx("px-4 py-3", styles.view)}>
       <Suspense fallback={<div>loading</div>}>
@@ -40,7 +39,11 @@ const View: React.FunctionComponent = () => {
         </Row>
         <Row>
           <Col sm={12} md={12} lg={6} className="mt-3">
-            <Equation variables={variables} funcName={funcName} />
+            <Equation
+              variables={variables}
+              funcName={funcName}
+              resultToken={result}
+            />
           </Col>
           <Col sm={12} md={12} lg={6} className="mt-3">
             <Blueprint formula={formula} />

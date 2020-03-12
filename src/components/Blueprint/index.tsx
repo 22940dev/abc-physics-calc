@@ -6,14 +6,16 @@ import variableTokens from "../../generated-tokens/astrodynamics/variables.json"
 import styles from "./styles.module.scss";
 
 const Blueprint: React.FunctionComponent<BlueprintProps> = ({
-  formula: { blueprint, variables }
+  formula: { blueprint, variables, result }
 }: BlueprintProps) => {
-  const normalizedVariableTokens: any = Object.entries(variableTokens).filter(
+  const entries = Object.entries(variableTokens);
+  const normalizedVariableTokens: any = entries.filter(
     v =>
       v[0] !== "TVSELECT_L" &&
       v[0] !== "TVSELECT_M" &&
       _.flatten(variables).includes(v[0])
   );
+  const [, decompressedResult]: any = entries.find(k => k[0] === result);
 
   return (
     <Card className={styles.card}>
@@ -32,6 +34,13 @@ const Blueprint: React.FunctionComponent<BlueprintProps> = ({
               <td colSpan={2} className="pl-3">
                 Where:
               </td>
+            </tr>
+            <tr>
+              <td
+                className="p-1"
+                dangerouslySetInnerHTML={{ __html: decompressedResult.symbol }}
+              />
+              <td className="pl-3"> {decompressedResult.desc}</td>
             </tr>
             {normalizedVariableTokens.map(({ 1: value }) => (
               <tr key={`blueprint_${value.desc}`}>
