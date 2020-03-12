@@ -26,7 +26,7 @@ const EquationInputWithSelect: React.FunctionComponent<EquationInputWithSelectPr
         <input
           id={desc}
           type="number"
-          className="mr-1"
+          className="px-1 mr-1"
           placeholder="0"
           value={inputValue}
           onChange={(e): void => handleInputChange(index, e.target.value)}

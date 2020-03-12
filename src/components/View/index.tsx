@@ -7,8 +7,11 @@ import startCase from "lodash/startCase";
 import Equation from "../Equation";
 import styles from "./styles.module.scss";
 import Blueprint from "../Blueprint";
+import { MOBILE_BREAKPOINT } from "../../constants";
+import { useWindowWidth } from "../../hooks/useWindowWidth";
 
 const View: React.FunctionComponent = () => {
+  const width = useWindowWidth();
   const history = useHistory();
   const { equation } = useParams();
   const activeEq = activeEquation(equation);
@@ -29,7 +32,12 @@ const View: React.FunctionComponent = () => {
   const { name, funcName, formula } = activeEquation(equation)[0];
   const { variables, result } = formula;
   return (
-    <div className={cx("px-4 py-3", styles.view)}>
+    <div
+      className={cx("px-4 py-3", {
+        [styles.view]: width >= MOBILE_BREAKPOINT,
+        [styles.mobileView]: width < MOBILE_BREAKPOINT
+      })}
+    >
       <Suspense fallback={<div>loading</div>}>
         <Row className="d-flex flex-column">
           <Col sm={12}>
