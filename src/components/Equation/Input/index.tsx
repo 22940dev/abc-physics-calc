@@ -3,7 +3,7 @@ import { EquationInputProps } from "../interface";
 
 const EquationInput: React.FunctionComponent<EquationInputProps> = ({
   field,
-  inputValues,
+  inputValue,
   index,
   handleInputChange
 }: EquationInputProps) => (
@@ -16,8 +16,8 @@ const EquationInput: React.FunctionComponent<EquationInputProps> = ({
         id={field.desc}
         type="number"
         placeholder="0"
-        className="mr-2"
-        value={inputValues[index]}
+        className="px-1 mr-2"
+        value={inputValue}
         disabled={!!field.value}
         onChange={(e): void => handleInputChange(index, e.target.value)}
       />

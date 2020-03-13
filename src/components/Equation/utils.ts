@@ -1,4 +1,4 @@
-import { decompressedFormulaVariables } from "../../utils";
+import { decompressedFormulaVariables } from "utils";
 
 export const mapInitialInputState = (
   variables: (string | string[])[] | undefined

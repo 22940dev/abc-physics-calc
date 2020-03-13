@@ -1,6 +1,6 @@
 import kebabCase from "lodash/kebabCase";
-import tokenVariables from "../generated-tokens/astrodynamics/variables.json";
-import astrodynamics from "../generated-tokens/astrodynamics/formulas.json";
+import tokenVariables from "generated-tokens/astrodynamics/variables.json";
+import astrodynamics from "generated-tokens/astrodynamics/formulas.json";
 
 export const activeEquation = (params: string | undefined) =>
   Object.values(astrodynamics).filter(({ name }) => kebabCase(name) === params);
@@ -32,3 +32,7 @@ export const decompressedFormulaVariables = (
     if (pureVariable) return [...acc, value];
     return acc;
   }, []);
+
+export const toRadians = (value: number): number => value * (Math.PI / 100);
+
+export const sin = (value: number): number => Math.sin(toRadians(value));

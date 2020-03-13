@@ -36,7 +36,7 @@
   },
   "TVCONST_6": {
     "desc": "Hubble Parameter At Present Epoch",
-    "symbol": "H",
+    "symbol": "H<sub>0</sub>",
     "value": 2.3e-18,
     "unit": "s<sup>-1</sup>"
   },
@@ -60,10 +60,10 @@
     "symbol": "P",
     "unit": "N/m<sup>2</sup>"
   },
-  "TVAD_5": { "desc": "Density", "symbol": "p", "unit": "kg/m<sup>3</sup>" },
+  "TVAD_5": { "desc": "Density", "symbol": "ρ", "unit": "kg/m<sup>3</sup>" },
   "TVAD_6": {
     "desc": "Neutron Mass",
-    "symbol": "mn",
+    "symbol": "m<sub>n</sub>",
     "unit": "m<sup>2</sup>kg/s"
   },
   "TVAD_7": {
@@ -71,7 +71,7 @@
     "symbol": "τ<sub>e</sub>",
     "unit": "sec"
   },
-  "TVAD_8": { "desc": "Mass of Body", "symbol": "m" },
+  "TVAD_8": { "desc": "Mass of Body", "symbol": "M" },
   "TVAD_9": { "desc": "Solar Mass", "symbol": "M<sub>☉</sub>" },
   "TVAD_10": { "desc": "Degeneracy Pressure", "symbol": "p", "unit": "Pa" },
   "TVAD_11": {
@@ -89,12 +89,12 @@
   },
   "TVAD_16": {
     "desc": "Hubble Parameter",
-    "symbol": "H",
+    "symbol": "H<sub>0</sub>",
     "unit": "s<sup>-1</sup>"
   },
   "TVAD_17": {
     "desc": "Curvature Density Parameter",
-    "symbol": "Ωk",
+    "symbol": "Ω<sub>k</sub>",
     "unit": "kg/m<sup>3</sup>"
   },
   "TVAD_18": { "desc": "Curvature", "symbol": "k" },
@@ -120,7 +120,10 @@
   "TVAD_29": { "desc": "Redshift", "symbol": "z" },
   "TVAD_30": { "desc": "Ring Angular Radius", "symbol": "θ" },
   "TVAD_31": { "desc": "Lens Mass", "symbol": "M" },
-  "TVAD_32": { "desc": "Distance from Observer to Source", "symbol": "ds" },
+  "TVAD_32": {
+    "desc": "Distance from Observer to Source",
+    "symbol": "d<sub>s</sub>"
+  },
   "TVAD_33": { "desc": "Distance from Observer to Lens", "symbol": "d" },
   "TVAD_34": { "desc": "Distance from Observer to Lens", "symbol": "d" },
   "TVAD_35": { "desc": "Radial Velocity", "symbol": "v<sub>r</sub>" },
@@ -132,7 +135,10 @@
   "TVAD_38": { "desc": "Observed Wavelength", "symbol": "λ<sub>obs</sub>" },
   "TVAD_39": { "desc": "Emitted Wavelength", "symbol": "λ<sub>em</sub>" },
   "TVAD_40": { "desc": "Friedmann Equation", "symbol": "h" },
-  "TVAD_41": { "desc": "Black Hole Temperature", "symbol": "τ<sub>KH" },
+  "TVAD_41": {
+    "desc": "Black Hole Temperature",
+    "symbol": "τ<sub>k<sub>b</sub>h</sub>"
+  },
   "TVSELECT_M": "mass",
   "TVSELECT_L": "length"
 }

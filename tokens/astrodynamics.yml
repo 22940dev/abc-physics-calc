@@ -14,7 +14,7 @@ TFAD_1:
   name: Absolute Visual Magnitude of Cepheid Variables
   funcName: absoluteVisualMagnitudeOfCepheidVariables
   formula:
-      blueprint: "<i class=\"variable\">M<sub>v</sub></i> ≈ -2.76 * log<sub>10</sub><i class=\"variable\">P<sub>d</sub></i> - 1.40"
+      blueprint: "<i class=\"variable\">M<sub>I</sub></i> ≈ -2.76 * log<sub>10</sub><i class=\"variable\">P<sub>d</sub></i> - 1.40"
       variables: [TVAD_3]
       result: TVAD_0
 
@@ -39,8 +39,8 @@ TFAD_5:
   funcName: neutronStarDegeneracyPressureByNonRelativisticNeutrons
   formula:
       blueprint: "<i class=\"variable\">P</i> = [ (3π<sup>2</sup>)<sup>2/3</sup> / 5 ] * [ (<i class=\"variable\">h</i> / (2π))<sup>2</sup> / <i class=\"variable\">m<sub>n</sub></i> ] * (<i class=\"variable\">ρ</i> / <i class=\"variable\">m<sub>n</sub></i>)<sup>5/3</sup>"
-      variables: [TVCONST_2, [TVAD_6, TVSELECT_M]]
-      result: TVAD_10,
+      variables: [TVCONST_2, TVAD_5, [TVAD_6, TVSELECT_M]]
+      result: TVAD_10
 
 TFAD_6:
   name: Gravitational Wave Luminosity
@@ -94,7 +94,7 @@ TFAD_14:
   name: Black Hole Gravitational Redshift
   funcName: blackholeGravitationalRedshift
   formula:
-      blueprint: '<i class="variable">v<sub>∞</sub></i> / <i class="variable">v<sub>r</sub></i> = √<i class="sqrt-overline"> 1 - (2 * <i class="variable">G</i> * <i class="variable">M</i> / <i class="variable">r</i> * <i class="variable">c</i><sup>2</sup>)</i>'
+      blueprint: '<i class="variable">v<sub>∞</sub></i> / <i class="variable">v<sub>r</sub></i> = √<span class="sqrt-overline"> 1 - (2 * <i class="variable">G</i> * <i class="variable">M</i> / <i class="variable">r</i> * <i class="variable">c</i><sup>2</sup>)</span>'
       variables: [TVCONST_5, TVCONST_4, [TVAD_8, TVSELECT_M], [TVAD_25, TVSELECT_L]]
       result: TVAD_24
 
@@ -134,7 +134,7 @@ TFAD_21:
   name: Angular Radius of Einstein Ring
   funcName: angularRadiusOfEinsteinRing
   formula:
-      blueprint: '<i class="variable">θ</i> = √<i class="sqrt-overline"> (4 * <i class="variable">G</i> * <i class="variable">M</i> / <i class="variable">c</i><sup>2</sup>) * [ (<i class="variable">d<sub>s</sub></i> - <i class="variable">d</i>) / (<i class="variable">d<sub>s</sub></i> * <i class="variable">d</i>) ]</i>'
+      blueprint: '<i class="variable">θ</i> = √<span> (4 * <i class="variable">G</i> * <i class="variable">M</i> / <i class="variable">c</i><sup>2</sup>) * [ (<i class="variable">d<sub>s</sub></i> - <i class="variable">d</i>) / (<i class="variable">d<sub>s</sub></i> * <i class="variable">d</i>) ]</span>'
       variables: [TVCONST_5, TVCONST_4, [TVAD_31, TVSELECT_M], [TVAD_32, TVSELECT_L], [TVAD_33, TVSELECT_L]]
       result: TVAD_30
 
@@ -158,16 +158,16 @@ TFAD_24:
   name: Friedmann Equation
   funcName: friedmannEquation
   formula:
-     blueprint: "<i class=\"variable\">h</i> = [ (8π/3)* <i class=\"variable\">G</i> * <i class=\"variable\">ρ</i> * <i class=\"variable\">R</i><sup>2</sup> ] - (<i class=\"variable\">k</i> * <i class=\"variable\">c</i><sup>2</sup>) + (<i class=\"variable\">Λ</i> * <i class=\"variable\">R</i><sup>2</sup>) / 3"
+     blueprint: "<i class=\"variable\">h</i> = [ (8π/3)* <i class=\"variable\">G</i> * <i class=\"variable\">ρ</i> * <i class=\"variable\">R</i><sup>2</sup> ] - (<i class=\"variable\">Ω<sub>k</sub></i> * <i class=\"variable\">c</i><sup>2</sup>) + (<i class=\"variable\">Λ</i> * <i class=\"variable\">R</i><sup>2</sup>) / 3"
      variables: [TVCONST_5, TVCONST_4, TVCONST_1, TVAD_5, TVAD_19, TVAD_17]
      result: TVAD_40
 
 TFAD_25:
- name: Equation Based on Pressure
- funcName: friedmannEquation
+ name: Friedmann Equation Based on Pressure
+ funcName: friedmannEquationBasedOnPressure
  formula:
      blueprint: "<i class=\"variable\">h</i> = (-4π / 3) * (<i class=\"variable\">G</i> * <i class=\"variable\">R</i>) * [ <i class=\"variable\">ρ</i> + (3 * <i class=\"variable\">P</i> / <i class=\"variable\">c</i><sup>2</sup>) ] + (<i class=\"variable\">Λ</i> * <i class=\"variable\">R</i><sup>2</sup> / 3)"
-     variables: [TVCONST_5, TVCONST_4, TVCONST_1, TVAD_5, TVAD_19, TVAD_17, TVAD_4]
+     variables: [TVCONST_5, TVCONST_4, TVCONST_1, TVAD_4, TVAD_5, TVAD_19]
      result: TVAD_40
 
 
@@ -175,7 +175,7 @@ TFAD_26:
   name: Black Hole Temperature
   funcName: blackholeTemperature
   formula:
-      blueprint: "<i class=\"variable\">τ<sub>KH</i> = (<i class=\"variable\">G</i> * <i class=\"variable\">M</i><sup>2</sup>) / (<i class=\"variable\">R<sub>o</sub></i> * <i class=\"variable\">L</i>)"
-      variables: [TVCONST_2, TVCONST_4, TVCONST_5, TVCONST_0, TVAD_8]
+      blueprint: "<i class=\"variable\">τ<sub>k<sub>b</sub>h</sub></i> = (<i class=\"variable\">G</i> * <i class=\"variable\">M</i><sup>2</sup>) / (<i class=\"variable\">R<sub>o</sub></i> * <i class=\"variable\">L</i>)"
+      variables: [TVCONST_2, TVCONST_4, TVCONST_5, TVCONST_0, [TVAD_8, TVSELECT_M]]
       result: TVAD_41
 

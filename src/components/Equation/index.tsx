@@ -3,10 +3,12 @@ import { decompressedFormulaVariables } from "utils";
 import { Card } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import cx from "classnames";
+import isNaN from "lodash/isNaN";
+import variableTokens from "generated-tokens/astrodynamics/variables.json";
+import * as formulas from "formulas/astrodynamics";
 import { EquationProps } from "./interface";
 import EquationInput from "./Input";
 import EquationInputWithSelect from "./InputWithSelect";
-import * as formulas from "../../formulas/astrodynamics";
 import {
   mapInitialInputState,
   mapSelectIndexes,
@@ -17,7 +19,8 @@ import styles from "./styles.module.scss";
 
 const Equation: React.FunctionComponent<EquationProps> = ({
   variables = [],
-  funcName
+  funcName,
+  resultToken
 }: EquationProps) => {
   /**
    * Hooks
@@ -35,6 +38,9 @@ const Equation: React.FunctionComponent<EquationProps> = ({
   const [selectValues, setSelectValues] = useState(initialSelectState);
   const [result, setResult] = useState(0);
   const missingInputValue = inputValues.some(v => v === "");
+  const [, decompressedResult]: any = Object.entries(variableTokens).find(
+    k => k[0] === resultToken
+  );
 
   /**
    * Effects
@@ -77,11 +83,12 @@ const Equation: React.FunctionComponent<EquationProps> = ({
       <Card.Body>
         {decompressedFormulaVariables(variables).map(
           (field: any, index: number) => {
+            const inputValue = inputValues[index] || "";
             return field.desc ? (
               <EquationInput
                 key={field.desc}
                 field={field}
-                inputValues={inputValues}
+                inputValue={inputValue}
                 index={index}
                 handleInputChange={handleInputChange}
               />
@@ -90,9 +97,10 @@ const Equation: React.FunctionComponent<EquationProps> = ({
                 key={field[0].desc}
                 field={field[0]}
                 selectCategory={field[1].selectCategory}
-                inputValues={inputValues}
+                inputValue={inputValue}
                 index={index}
                 selectIndexes={selectIndexes}
+                selectValues={selectValues}
                 handleInputChange={handleInputChange}
                 handleSelectChange={handleSelectChange}
               />
@@ -100,13 +108,20 @@ const Equation: React.FunctionComponent<EquationProps> = ({
           }
         )}
       </Card.Body>
-      <Card.Footer className="d-flex flex-column pt-1">
-        <div>Result:</div>
+      <Card.Footer className="d-flex flex-column">
+        <h6 className="mb-0">{decompressedResult.desc}</h6>
         <div className={cx("d-flex align-items-center", styles.result)}>
-          {result}{" "}
+          {isNaN(result) ? "Incorrect values." : result}
+          {(!isNaN(result) && decompressedResult.unit && (
+            <div
+              className="ml-1"
+              dangerouslySetInnerHTML={{ __html: decompressedResult.unit }}
+            />
+          )) ||
+            ""}
           {missingInputValue && (
             <span className={cx("ml-1", styles.resultNotice)}>
-              (In order to see the result provide values to all inputs)
+              (In order to see the result provide values to all fields)
             </span>
           )}
         </div>
