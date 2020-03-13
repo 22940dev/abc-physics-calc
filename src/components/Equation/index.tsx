@@ -112,7 +112,7 @@ const Equation: React.FunctionComponent<EquationProps> = ({
         <h6 className="mb-0">{decompressedResult.desc}</h6>
         <div className={cx("d-flex align-items-center", styles.result)}>
           {isNaN(result) ? "Incorrect values." : result}
-          {(decompressedResult.unit && (
+          {(!isNaN(result) && decompressedResult.unit && (
             <div
               className="ml-1"
               dangerouslySetInnerHTML={{ __html: decompressedResult.unit }}
