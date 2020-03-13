@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/sbsrnt/physics-calc-v2/compare/v1.0.2...v1.1.0) (2020-03-13)
+
+
+### Features
+
+* add mobile sidebar ([f18c93c](https://github.com/sbsrnt/physics-calc-v2/commit/f18c93c3df143330bf6b4709cc6fccb66893368c))
+* add result symbol and desc to equations ([0f5b930](https://github.com/sbsrnt/physics-calc-v2/commit/0f5b930ea555b97dd3dce6f1fb0975894b4d591a))
+* add sidebar footer ([b8538c8](https://github.com/sbsrnt/physics-calc-v2/commit/b8538c89f7ab0a4ed0a19bcf41896c29889331ab))
+* home page ([9ea1c25](https://github.com/sbsrnt/physics-calc-v2/commit/9ea1c25afd774e7a5389ab2d6ef912cac66d9a57))
+* length and mass select values ([0820299](https://github.com/sbsrnt/physics-calc-v2/commit/0820299c76960b2fe1154ce0db1eca5062eade5c))
+
+
+### Bug Fixes
+
+* adjust ad function params to rendered fields ([fc8d4cf](https://github.com/sbsrnt/physics-calc-v2/commit/fc8d4cf1357ba7f6f0900ba63ac4a4caa21ff1c8))
+* make uncontrolled input value controlled ([774ebcb](https://github.com/sbsrnt/physics-calc-v2/commit/774ebcb08ded36a86bd685b6f401ccc5e3b96b7b))
+* remove unit from result when result is nan ([40fc298](https://github.com/sbsrnt/physics-calc-v2/commit/40fc298d9c7520223c8ef17d0bb8011c510f6fb3))
+
 ### [1.0.2](https://github.com/sbsrnt/physics-calc-v2/compare/v1.0.1...v1.0.2) (2020-03-08)
 
 
