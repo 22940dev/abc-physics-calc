@@ -56,7 +56,6 @@ const Equation: React.FunctionComponent<EquationProps> = ({
     const calculatedValue = inputsWithSelects
       ? formulas[funcName](...numericInputValues)(...selectValues)
       : formulas[funcName](...numericInputValues);
-    // console.log(calculatedValue, numericInputValues, inputsWithSelects);
     const r = missingInputValue ? 0 : calculatedValue;
 
     setResult(r);

@@ -34,7 +34,7 @@ const EquationInputWithSelect: React.FunctionComponent<EquationInputWithSelectPr
         <Select
           category={selectCategory}
           selectedValue={selectValues[selectIndex]}
-          onChange={(e): void =>
+          onChange={(e: { target: { value: string | number } }): void =>
             handleSelectChange(selectIndex, +e.target.value)
           }
         />

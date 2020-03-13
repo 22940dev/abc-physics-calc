@@ -42,7 +42,7 @@ const Blueprint: React.FunctionComponent<BlueprintProps> = ({
               />
               <td className="pl-3"> {decompressedResult.desc}</td>
             </tr>
-            {normalizedVariableTokens.map(({ 1: value }) => (
+            {normalizedVariableTokens.map(({ 1: value }: any) => (
               <tr key={`blueprint_${value.desc}`}>
                 <td
                   className="p-1"
