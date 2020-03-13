@@ -1,6 +1,6 @@
 import kebabCase from "lodash/kebabCase";
-import tokenVariables from "../generated-tokens/astrodynamics/variables.json";
-import astrodynamics from "../generated-tokens/astrodynamics/formulas.json";
+import tokenVariables from "generated-tokens/astrodynamics/variables.json";
+import astrodynamics from "generated-tokens/astrodynamics/formulas.json";
 
 export const activeEquation = (params: string | undefined) =>
   Object.values(astrodynamics).filter(({ name }) => kebabCase(name) === params);

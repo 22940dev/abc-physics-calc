@@ -1,8 +1,8 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import _ from "lodash";
+import variableTokens from "generated-tokens/astrodynamics/variables.json";
 import { BlueprintProps } from "./interface";
-import variableTokens from "../../generated-tokens/astrodynamics/variables.json";
 import styles from "./styles.module.scss";
 
 const Blueprint: React.FunctionComponent<BlueprintProps> = ({

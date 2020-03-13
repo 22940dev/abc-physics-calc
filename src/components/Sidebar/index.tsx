@@ -2,7 +2,7 @@ import React from "react";
 import kebabCase from "lodash/kebabCase";
 import { NavLink } from "react-router-dom";
 import cx from "classnames";
-import astrodynamics from "../../generated-tokens/astrodynamics/formulas.json";
+import astrodynamics from "generated-tokens/astrodynamics/formulas.json";
 import SidebarFooter from "./SidebarFooter";
 import styles from "./styles.module.scss";
 import MobileWrapper from "./MobileWrapper";

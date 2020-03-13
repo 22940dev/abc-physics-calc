@@ -4,10 +4,11 @@ import { Card } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import cx from "classnames";
 import isNaN from "lodash/isNaN";
+import variableTokens from "generated-tokens/astrodynamics/variables.json";
+import * as formulas from "formulas/astrodynamics";
 import { EquationProps } from "./interface";
 import EquationInput from "./Input";
 import EquationInputWithSelect from "./InputWithSelect";
-import * as formulas from "../../formulas/astrodynamics";
 import {
   mapInitialInputState,
   mapSelectIndexes,
@@ -15,7 +16,6 @@ import {
   mapModifiedValues
 } from "./utils";
 import styles from "./styles.module.scss";
-import variableTokens from "../../generated-tokens/astrodynamics/variables.json";
 
 const Equation: React.FunctionComponent<EquationProps> = ({
   variables = [],

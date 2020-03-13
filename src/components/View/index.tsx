@@ -4,11 +4,11 @@ import { activeEquation } from "utils";
 import cx from "classnames";
 import { Col, Row } from "react-bootstrap";
 import startCase from "lodash/startCase";
+import { useWindowWidth } from "hooks/useWindowWidth";
 import Equation from "../Equation";
 import styles from "./styles.module.scss";
 import Blueprint from "../Blueprint";
 import { MOBILE_BREAKPOINT } from "../../constants";
-import { useWindowWidth } from "../../hooks/useWindowWidth";
 
 const View: React.FunctionComponent = () => {
   const width = useWindowWidth();
