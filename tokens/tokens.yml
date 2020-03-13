@@ -41,7 +41,7 @@ TVCONST_5:
 
 TVCONST_6:
   desc: Hubble Parameter At Present Epoch
-  symbol: H
+  symbol: H<sub>0</sub>
   value: 2.3e-18
   unit: s<sup>-1</sup>
 
@@ -70,12 +70,12 @@ TVAD_4:
 
 TVAD_5:
   desc: Density
-  symbol: p
+  symbol: ρ
   unit: kg/m<sup>3</sup>
 
 TVAD_6:
   desc: Neutron Mass
-  symbol: mn
+  symbol: m<sub>n</sub>
   unit: m<sup>2</sup>kg/s
 
 TVAD_7:
@@ -85,7 +85,7 @@ TVAD_7:
 
 TVAD_8:
   desc: Mass of Body
-  symbol: m
+  symbol: M
 
 TVAD_9:
   desc: Solar Mass
@@ -120,12 +120,12 @@ TVAD_15:
 
 TVAD_16:
   desc: Hubble Parameter
-  symbol: H
+  symbol: H<sub>0</sub>
   unit: s<sup>-1</sup>
 
 TVAD_17:
   desc: Curvature Density Parameter
-  symbol: Ωk
+  symbol: Ω<sub>k</sub>
   unit: kg/m<sup>3</sup>
 
 TVAD_18:
@@ -186,7 +186,7 @@ TVAD_31:
 
 TVAD_32:
   desc: Distance from Observer to Source
-  symbol: ds
+  symbol: d<sub>s</sub>
 
 TVAD_33:
   desc: Distance from Observer to Lens
@@ -222,7 +222,7 @@ TVAD_40:
 
 TVAD_41:
   desc: Black Hole Temperature
-  symbol: τ<sub>KH
+  symbol: τ<sub>k<sub>b</sub>h</sub>
 
 
 TVSELECT_M: mass

@@ -12,7 +12,7 @@
     "name": "Absolute Visual Magnitude of Cepheid Variables",
     "funcName": "absoluteVisualMagnitudeOfCepheidVariables",
     "formula": {
-      "blueprint": "<i class=\"variable\">M<sub>v</sub></i> ≈ -2.76 * log<sub>10</sub><i class=\"variable\">P<sub>d</sub></i> - 1.40",
+      "blueprint": "<i class=\"variable\">M<sub>I</sub></i> ≈ -2.76 * log<sub>10</sub><i class=\"variable\">P<sub>d</sub></i> - 1.40",
       "variables": ["TVAD_3"],
       "result": "TVAD_0"
     }
@@ -205,7 +205,7 @@
     "name": "Friedmann Equation",
     "funcName": "friedmannEquation",
     "formula": {
-      "blueprint": "<i class=\"variable\">h</i> = [ (8π/3)* <i class=\"variable\">G</i> * <i class=\"variable\">ρ</i> * <i class=\"variable\">R</i><sup>2</sup> ] - (<i class=\"variable\">k</i> * <i class=\"variable\">c</i><sup>2</sup>) + (<i class=\"variable\">Λ</i> * <i class=\"variable\">R</i><sup>2</sup>) / 3",
+      "blueprint": "<i class=\"variable\">h</i> = [ (8π/3)* <i class=\"variable\">G</i> * <i class=\"variable\">ρ</i> * <i class=\"variable\">R</i><sup>2</sup> ] - (<i class=\"variable\">Ω<sub>k</sub></i> * <i class=\"variable\">c</i><sup>2</sup>) + (<i class=\"variable\">Λ</i> * <i class=\"variable\">R</i><sup>2</sup>) / 3",
       "variables": [
         "TVCONST_5",
         "TVCONST_4",
@@ -237,7 +237,7 @@
     "name": "Black Hole Temperature",
     "funcName": "blackholeTemperature",
     "formula": {
-      "blueprint": "<i class=\"variable\">τ<sub>KH</i> = (<i class=\"variable\">G</i> * <i class=\"variable\">M</i><sup>2</sup>) / (<i class=\"variable\">R<sub>o</sub></i> * <i class=\"variable\">L</i>)",
+      "blueprint": "<i class=\"variable\">τ<sub>k<sub>b</sub>h</sub></i> = (<i class=\"variable\">G</i> * <i class=\"variable\">M</i><sup>2</sup>) / (<i class=\"variable\">R<sub>o</sub></i> * <i class=\"variable\">L</i>)",
       "variables": [
         "TVCONST_2",
         "TVCONST_4",
