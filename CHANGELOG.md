@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/sbsrnt/physics-calc-v2/compare/v1.1.0...v1.1.1) (2020-08-12)
+
+
+### Bug Fixes
+
+* **navbar:** add scrollbar ([7a3da50](https://github.com/sbsrnt/physics-calc-v2/commit/7a3da50a714d0dbf30e926df3e86a4d8dcef9b8a))
+
 ## [1.1.0](https://github.com/sbsrnt/physics-calc-v2/compare/v1.0.2...v1.1.0) (2020-03-13)
 
 
